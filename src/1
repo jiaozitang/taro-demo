@@ -1,0 +1,10 @@
+yarn link @tarojs/runtime
+yarn link @tarojs/plugin-platform-harmony
+yarn link @tarojs/plugin-framework-react
+yarn link @tarojs/plugin-framework-vue2
+yarn link @tarojs/plugin-framework-vue3
+yarn link @tarojs/mini-runner
+yarn link @tarojs/taro
+yarn link @tarojs/api
+yarn link @tarojs/shared
+yarn link @tarojs/taro-loader
