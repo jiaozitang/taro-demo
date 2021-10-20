@@ -8,8 +8,9 @@ const config = {
     828: 1.81 / 2
   },
   sourceRoot: 'src',
+  // outputRoot: '/Users/tangjiao11/DevEcoStudioProjects/MyApplication6/entry/src/main/js/default',
   outputRoot: 'dist',
-  plugins: ['@tarojs/plugin-platform-harmony'],
+  plugins: [], // '@tarojs/plugin-platform-harmony'
   defineConstants: {
   },
   copy: {

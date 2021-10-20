@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { View, Text, Image} from '@tarojs/components'
+import { View, Button} from '@tarojs/components'
 import './index.scss'
 
 export default class Index extends Component {
@@ -17,8 +17,13 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Text>Hello world!</Text>
-        <Image src={require('./1.jpg')} />
+        {/* <Text>Hello world!</Text> */}
+        {/* <Camera></Camera> */}
+        {/* <CoverImage src={require('./1.jpg')} ></CoverImage> */}
+        <Button hover-stay-time={1000} type='warn' plain onClick={() => {
+          console.log('哈哈哈')
+        }} value="哈哈哈"
+        >哈哈哈</Button>
       </View>
     )
   }
