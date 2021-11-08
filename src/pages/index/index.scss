@@ -1,4 +1,18 @@
 .index {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+}
+.box {
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.coverImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
 }

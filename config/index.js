@@ -1,6 +1,6 @@
 const config = {
-  projectName: 'harmony-demo',
-  date: '2021-11-6',
+  projectName: 'h5-demo',
+  date: '2021-11-8',
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
@@ -8,8 +8,8 @@ const config = {
     828: 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: '/Users/tangjiao11/DevEcoStudioProjects/MyApplication6/entry/src/main/js/default',
-  plugins: ['@tarojs/plugin-platform-harmony'],
+  outputRoot: 'dist',
+  plugins: [],
   defineConstants: {
   },
   copy: {
@@ -20,7 +20,6 @@ const config = {
   },
   framework: 'react',
   mini: {
-    debugReact: true,
     postcss: {
       pxtransform: {
         enable: true,
