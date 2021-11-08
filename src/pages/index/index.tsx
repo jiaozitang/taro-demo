@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { View, Text } from '@tarojs/components'
 import './index.scss'
-import MyButton from './component/MyButton'
+import MyCoverImage from './component/MyCoverImage'
 
 export default class Index extends Component {
 
@@ -20,7 +20,7 @@ export default class Index extends Component {
       <View className='index'>
         <Text>Hello world!</Text>
         <MyButton></MyButton>
-        {/* <MyCoverImage /> */}
+        <MyCoverImage />
       </View>
     )
   }
