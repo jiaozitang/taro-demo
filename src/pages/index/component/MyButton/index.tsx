@@ -15,6 +15,7 @@ export default class MyButton extends Component {
     return (
       <View className='container'>
         {/* <Label>123</Label> */}
+        <Button type='default'  size='mini'>type default1</Button>
         <Button type='default'  className='test' >type default1</Button>
         <Button type='primary' >type primary </Button>
         <Button type='warn' >type warn </Button>
