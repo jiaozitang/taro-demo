@@ -3,6 +3,12 @@ import { View, Button } from '@tarojs/components'
 import './index.scss'
 
 export default class MyButton extends Component {
+  state = {
+    loading: false,
+    disabled: false,
+    plain: false,
+    isMini: false
+  }
   componentWillMount () { }
 
   componentDidMount () { }
@@ -12,27 +18,40 @@ export default class MyButton extends Component {
   componentDidHide () { }
 
   render () {
+    const arr = ['default', 'warn', 'primary']
+    const {
+      loading,
+      disabled,
+      plain,
+      isMini
+    } = this.state
     return (
       <View className='container'>
-        {/* <Label>123</Label> */}
-        <Button type='default'  size='mini'>type default1</Button>
-        <Button type='default'  className='test' >type default1</Button>
-        <Button type='primary' >type primary </Button>
-        <Button type='warn' >type warn </Button>
-        <Button type='default'  className='test'  plain>type default</Button>
-        <Button type='primary'  plain>type primary </Button>
-        <Button type='warn'  plain>type warn </Button>
-        <Button type='default'  disabled >type default  disabled</Button>
-        <Button type='primary'  disabled >type primary  disabled</Button>
-        <Button type='warn'  disabled >type warn  disabled</Button>
-        <Button type='default'  loading >type default  disabled loading</Button>
-        <Button type='primary'  loading >type primary  disabled loading</Button>
-        <Button type='warn'  loading>type warn  disabled loading</Button>
-        <Button type='default'  onClick={() => {
-          console.log('click')
-        }} onTouchStart={() => {
-          console.log('ontouchstart')
-        }}>type default click</Button>
+        {
+          arr.map(i => {
+            return <Button type={i} loading={loading} size={isMini ? 'mini' : 'default'} plain={plain} disabled={disabled}>{i}</Button>
+          })
+        }
+        <Button onClick={() => {
+          this.setState({
+            isMini: !this.state.isMini
+          })
+        }}>{this.state.isMini ? '取消' : '设置'}以上按钮Size mini属性</Button>
+        <Button onClick={() => {
+          this.setState({
+            plain: !this.state.plain
+          })
+        }}>{this.state.plain ? '取消' : '设置'}以上按钮plain属性</Button>
+        <Button onClick={() => {
+          this.setState({
+            loading: !this.state.loading
+          })
+        }}>{this.state.loading ? '取消' : '设置'}以上按钮loading属性</Button>
+        <Button onClick={() => {
+          this.setState({
+            disabled: !this.state.disabled
+          })
+        }}>{this.state.disabled ? '取消' : '设置'}以上按钮disabled属性</Button>
       </View>
     )
   }
