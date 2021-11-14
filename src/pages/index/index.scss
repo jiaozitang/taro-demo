@@ -2,7 +2,7 @@
   position: relative;
 }
 .box {
-  width: 500px;
+  width: 600px;
   height: 500px;
   background-color: red;
   position: absolute;
@@ -24,6 +24,7 @@
   width: 200px;
   height: 300px;
   font-size: 26px;
+  opacity: 0.8;
 }
 
 .demo-text-1 {
@@ -36,4 +37,8 @@
 
 .demo-text-3 {
   background: rgba(255, 255, 255, 0.7);
+}
+
+.hoverclass {
+  background-color: #ccc;
 }
