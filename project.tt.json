@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "./",
-  "projectname": "test",
+  "projectname": "tr",
   "appid": "touristappid",
   "setting": {
     "es6": false,
