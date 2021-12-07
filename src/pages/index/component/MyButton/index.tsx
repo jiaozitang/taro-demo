@@ -1,13 +1,13 @@
 import { Component } from 'react'
-import { View, Button } from '@tarojs/components'
+import { View, Button, Form, Input } from '@tarojs/components'
 import './index.scss'
-
 export default class MyButton extends Component {
   state = {
     loading: false,
     disabled: false,
     plain: false,
-    isMini: false
+    isMini: false,
+    value: ''
   }
   componentWillMount () { }
 
@@ -18,15 +18,28 @@ export default class MyButton extends Component {
   componentDidHide () { }
 
   render () {
-    const arr = ['default', 'warn', 'primary']
+    const arr:  ('default'| 'warn' | 'primary')[] = ['default', 'warn', 'primary']
     const {
       loading,
       disabled,
       plain,
-      isMini
+      isMini,
+      value
     } = this.state
     return (
       <View className='container'>
+        <Form onSubmit={(e) => {
+          console.log(JSON.stringify(e))
+          console.log('submit')
+        }} onReset={() => {
+          console.log('reset')
+        }}>
+          <Input type='text' value={value} />
+          <Button formType='reset' onClick={() => {
+            console.log(888)
+          }}>reset</Button>
+          <Button formType='submit'>submit</Button>
+        </Form>
         {
           arr.map(i => {
             return <Button className='btn' key={i} type={i} loading={loading} size={isMini ? 'mini' : 'default'} plain={plain} disabled={disabled}>{i}</Button>
@@ -36,6 +49,7 @@ export default class MyButton extends Component {
           this.setState({
             isMini: !this.state.isMini
           })
+          console.log('click')
         }} onTouchStart={() => {
           console.log('taro touchstart')
         }} onTouchEnd={() => {

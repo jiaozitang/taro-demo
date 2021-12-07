@@ -8,7 +8,7 @@ const config = {
     828: 1.81 / 2
   },
   sourceRoot: 'src',
-  outputRoot: '/Users/tangjiao11/DevEcoStudioProjects/MyApplication6/entry/src/main/js/default',
+  outputRoot: '/Users/tangjiao11/DevEcoStudioProjects/MyApplication/entry/src/main/js/default',
   plugins: ['@tarojs/plugin-platform-harmony'],
   defineConstants: {
   },
@@ -60,6 +60,14 @@ const config = {
         }
       }
     }
+  },
+  harmony: {
+    // 【必填】鸿蒙应用的绝对路径
+    projectPath: '/Users/tangjiao11/DevEcoStudioProjects/MyApplication',
+    // 【可选】HAP 的名称，默认为 'entry'
+    hapName: 'entry',
+    // 【可选】JS FA 的名称，默认为 'default'
+    jsFAName: 'default'
   }
 }
 
